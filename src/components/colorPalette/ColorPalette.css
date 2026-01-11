@@ -1,55 +1,43 @@
+.stripe {
+  flex: 1;
+  transition: background-color 0.4s ease;
+}
 .card {
-  width: 360px;
+  width: 460px;
   height: 220px;
   display: flex;
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
   background: #eee;
+  transition: all 0.3s ease;
 }
 
-.stripe {
+.card div {
   flex: 1;
-  transition: background-color 0.4s ease;
-}
-/* Palette wrapper */
-.palette-wrapper {
-  width: 100%;
-  max-width: 440px; /* максимально на великих екранах */
-  height: 150px;
-  border-radius: 24px;
-  display: flex;
-  justify-content: space-between; /* рівномірний розподіл кольорів */
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.palette-wrapper div {
-  flex: 1; 
   height: 100%;
 }
 
-
 @media (max-width: 768px) {
-  .palette-wrapper {
+  .card {
+    width: 100%;
     max-width: 360px;
     height: 130px;
   }
 }
 
-
 @media (max-width: 480px) {
-  .palette-wrapper {
+  .card {
     max-width: 300px;
     height: 120px;
   }
 }
 
-
 @media (max-width: 400px) {
-  .palette-wrapper {
+  .card {
     max-width: 220px;
     height: 90px;
   }
 }
+
 

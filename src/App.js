@@ -15,7 +15,8 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/registration" element={<SignUp />} />
       <Route path="/color-generator" element={<Generator />} />
-      <Route path="/color/:hex" element={<ColorPage />} />
+      <Route path="/colors/:hex" element={<ColorPage />} />
+
     </Routes>
   );
 }

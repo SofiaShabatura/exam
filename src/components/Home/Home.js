@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useMemo } from 'react';
 import { HoverColorLetters } from '../hoverColorLetters/hoverColorLetters';
 import ColorPalette from '../colorPalette/ColorPalette';
+import HomeFooter from '../HomeFooter/HomeFooter';
 import Header from '../Header/Header';
 import './Home.css';
 
@@ -53,39 +54,39 @@ const Home = () => {
 
   return (
     <div className="home">
-      <Header />
-      <main className="home-main">
-        <div className="home-left">
-          <HoverColorLetters
-            text="The super fast color palettes generator!"
-            defaultColor="black"
-            colors={['#6369d1', '#60e1e0', '#d8d2e1', '#b88e8d', '#34435e']}
-            className="hover-title"
-          />
+  <Header />
 
-        <div className="title-stickers">
-          <span className="title-sticker">
-            <img src = '/imagess/tittle.svg' />
-          </span>
-        </div>
+  <main className="home-main">
+    <div className="home-left">
 
-          <p className="home-description">
-            Create the perfect palette or get inspired by thousands of beautiful color schemes.
-          </p>
+      <HoverColorLetters
+        text="The super fast color palettes generator!"
+        defaultColor="black"
+        colors={['#6369d1', '#60e1e0', '#d8d2e1', '#b88e8d', '#34435e']}
+        className="hover-title"
+      />
 
-          <div className="home-buttons">
-            <button
-              className="create-btn1"
-              onClick={() => navigate('/color-generator')}
-            >
-              Start the Generator
-            </button>
+      <div className="title-stickers">
+        <img
+          src="/images/tittle.svg"
+          alt="sticker"
+          className="title-sticker"
+        />
+      </div>
 
-            <button className="create-btn2">
-              Explore 10M+ Palettes
-            </button>
-          </div>
-        </div>
+      <p className="home-description">
+        Create the perfect palette or get inspired by thousands of beautiful color schemes.
+      </p>
+
+      <div className="home-buttons">
+        <button className="create-btn1" onClick={() =>
+            navigate('/color-generator')
+        }>Start the Generator</button>
+        <button className="create-btn2">Explore 10M+ Palettes</button>
+      </div>
+
+    </div>
+
 
         <div className="home-right">
           <div className="palette-wrapper">
@@ -125,8 +126,7 @@ const Home = () => {
           className="color-of-the-day"
           onClick={() =>
             navigate(`/colors/${colorOfTheDay.hex.replace('#', '')}`)
-}
-
+          }
         >
           <div className="cotd-title">COLOR OF THE DAY</div>
 
@@ -233,66 +233,10 @@ const Home = () => {
     Make something <br /> colorful.
   </h1>
 </section>
-<section className="footer-links">
-  <div className="footer-column">
-    <h4>TOOLS</h4>
-    <ul>
-      <li>Generate your palettes</li>
-      <li>Explore popular palettes</li>
-      <li>Extract palette from image</li>
-      <li>Contrast checker</li>
-      <li>Preview palettes on designs</li>
-      <li>Color picker</li>
-      <li>Tailwind Colors</li>
-      <li>Color Bot</li>
-    </ul>
-  </div>
-
-  <div className="footer-column">
-    <h4>DISCOVER</h4>
-    <ul>
-      <li>List of colors</li>
-      <li>Browse gradients</li>
-      <li>Create a gradient</li>
-      <li>Make a gradient palette</li>
-      <li>Image converter</li>
-      <li>Recolor your own design</li>
-      <li>Create a collage</li>
-      <li>Browse free fonts</li>
-      <li>Font Generator</li>
-    </ul>
-  </div>
-
-  <div className="footer-column">
-    <h4>APPS</h4>
-    <ul>
-      <li>iOS App</li>
-      <li>Figma Plugin</li>
-      <li>Adobe Extension</li>
-      <li>Chrome Extension</li>
-    </ul>
-  </div>
-
-  <div className="footer-column">
-    <h4>COMPANY</h4>
-    <ul>
-      <li>Pricing</li>
-      <li>License</li>
-      <li>Terms of service</li>
-      <li>Privacy policy</li>
-      <li>Cookie policy</li>
-      <li>Manage cookies</li>
-      <li>Help center</li>
-      <li>Advertise</li>
-      <li>Affiliate</li>
-      <li>Contact</li>
-      <li>Feature Requests</li>
-    </ul>
-  </div>
+<section>
+  <HomeFooter />
 </section>
-
-
-    </div>
+</div>
   );
 }
 

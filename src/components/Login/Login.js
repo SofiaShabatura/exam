@@ -15,12 +15,12 @@ const Login = () => {
 
         <button className="login-btn social">
            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgMhgB-GccVnB-ZJFuZg7HUsmdifnuxStqmA&s" alt="Google" /> 
-           Continue with Google 
-           </button>
-            <button className="login-btn social"> 
-              <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Apple" /> 
-              Continue with Apple 
-            </button>
+           <div className="continue-text">Continue with Google</div>
+        </button>
+        <button className="login-btn social"> 
+          <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Apple" /> 
+          <div className="continue-text">Continue with Apple</div>
+        </button>
         <div className="login-or">
           <span>OR</span>
         </div>
