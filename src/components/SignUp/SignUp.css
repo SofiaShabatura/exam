@@ -1,0 +1,171 @@
+.signup {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+
+.signup-left {
+  flex: 1;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.signup-title h1 {
+  font-size: 56px;
+  margin-bottom: 12px;
+  font-weight: 1000;
+}
+
+.signup-title p {
+  color: #6b7280;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+
+.signup-left input {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper button {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.primary-btn {
+  width: 100%;
+  padding: 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+}
+
+.signup-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.signup-footer a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-footer a:hover {
+  text-decoration: underline;
+}
+
+
+.signup-right {
+  flex: 1;
+  background: linear-gradient(
+    135deg,
+    #ff4ecd,
+    #ffc371,
+    #a1ffce,
+    #fbc2eb
+  );
+}
+
+
+@media (max-width: 1024px) {
+  .signup-left {
+    padding: 60px;
+  }
+
+  .signup-title h1 {
+    font-size: 48px;
+  }
+
+  .signup-title p {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .signup {
+    flex-direction: column;
+  }
+
+  .signup-left,
+  .signup-right {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .signup-title h1 {
+    font-size: 40px;
+  }
+
+  .signup-title p {
+    font-size: 15px;
+  }
+
+  .primary-btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .signup-left {
+    padding: 24px 12px;
+  }
+
+  .signup-title h1 {
+    font-size: 32px;
+  }
+
+  .signup-title p {
+    font-size: 14px;
+  }
+
+  .signup-left input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .primary-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
