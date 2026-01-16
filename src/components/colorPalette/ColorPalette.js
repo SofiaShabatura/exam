@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./ColorPalette.css";
-
 
 export default function ColorPalette() {
   const palettes = [
@@ -15,8 +14,16 @@ export default function ColorPalette() {
 
   const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((i) => (i + 1) % palettes.length);
+    }, 2000); 
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="card" onClick={() => setIndex((i) => (i + 1) % palettes.length)}>
+    <div className="card">
       {palettes[index].map((color, i) => (
         <div
           key={i}
