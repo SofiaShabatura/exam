@@ -1,0 +1,32 @@
+.container {
+  display: inline-flex; 
+  flex-wrap: wrap;      
+  align-items: center;  
+  justify-content: center; 
+  line-height: 1;      
+}
+
+.letter {
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+
+
+.letter.anim_color {
+    animation-name: letter-color;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+
+@keyframes letter-color {
+
+    0%,
+    100% {
+        color: var(--default-color)
+    }
+
+    15%, 85% {
+        color: var(--color)
+    }
+}

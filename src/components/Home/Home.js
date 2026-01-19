@@ -4,7 +4,9 @@ import { HoverColorLetters } from '../hoverColorLetters/hoverColorLetters';
 import ColorPalette from '../colorPalette/ColorPalette';
 import HomeFooter from '../HomeFooter/HomeFooter';
 import Header from '../Header/Header';
+import Letters, { ColorLetters } from '../ColorLetters/ColorLetters';
 import './Home.css';
+
 
 const COLORS = [
   {
@@ -229,9 +231,12 @@ const Home = () => {
     <button>Adobe Extension</button>
   </div>
 
-  <h1 className="plugins-title">
-    Make something <br /> colorful.
-  </h1>
+<ColorLetters
+  text="Make something colorful!"
+  colors={['#6369d1', '#60e1e0', '#d8d2e1', '#b88e8d', '#34435e']}
+  defaultColor="#ededed"
+/>
+
 </section>
 <section>
   <HomeFooter />
